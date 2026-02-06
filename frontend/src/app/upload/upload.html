@@ -1,0 +1,17 @@
+<h2>SME Financial Health Assessment</h2>
+
+<input type="file" (change)="onFileChange($event)" />
+<br /><br />
+
+<button (click)="upload()">Analyze</button>
+
+<div *ngIf="result">
+  <h3>Health Score: {{ result.health_score }}</h3>
+
+  <p><b>Revenue:</b> {{ result.financials.revenue }}</p>
+  <p><b>Expenses:</b> {{ result.financials.expenses }}</p>
+  <p><b>Profit:</b> {{ result.financials.profit }}</p>
+
+  <h4>AI Insights</h4>
+  <p>{{ result.ai_insights }}</p>
+</div>
