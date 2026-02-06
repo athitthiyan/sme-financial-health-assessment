@@ -23,7 +23,7 @@ export class upload {
     formData.append('file', this.file);
 
     this.http
-      .post('http://127.0.0.1:8000/analyze', formData)
+      .post('https://sme-fin-backend.onrender.com/analyze', formData)
       .subscribe(res => (this.result = res));
   }
 }
